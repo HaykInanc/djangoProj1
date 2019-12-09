@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Ура! Оно работает</h1>
+	<p>мы шли к этому очень долго!!</p>
+	{% for good in goods %}
+		<h2>{{ good.title }}</h2>
+		<p>{{ good.description }}</p>
+		<p>Цена: {{ good.price }}</p>
+		{% if good.sale %}
+			<p>Скидка: {{ good.sale.percent }}%</p>
+		{% endif %}
+	{% endfor %}
+</body>
+</html>
